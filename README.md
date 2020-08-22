@@ -1,5 +1,19 @@
 # Express API Starter
 
+Gengerated by 
+
+```cmd
+npx.cmd create-express-api expressapi
+```
+
+Run by
+
+```
+npm.cmd run dev
+```
+
+Call API with X-API-KEY=1234 in the header
+
 Includes API Server utilities:
 
 * [morgan](https://www.npmjs.com/package/morgan)
