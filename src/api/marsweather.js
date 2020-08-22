@@ -1,7 +1,7 @@
 const express = require('express');
 const axios = require('axios');
 const rateLimit = require('express-rate-limit');
-const slowDown = require("express-slow-down");
+const slowDown = require('express-slow-down');
 
 const speedLimiter = slowDown({
   windowMs: 30 * 1000, // 30 secs
@@ -27,7 +27,7 @@ let cacheTime;
 const apiKeys = new Map();
 apiKeys.set('1234', true);
 
-router.get('/', limiter, speedLimiter, (req, res, next) =>{
+router.get('/', limiter, speedLimiter, (req, res, next) => {
   const apiKey = req.get('X-API-KEY');
   if (apiKeys.has(apiKey)) {
     next();
